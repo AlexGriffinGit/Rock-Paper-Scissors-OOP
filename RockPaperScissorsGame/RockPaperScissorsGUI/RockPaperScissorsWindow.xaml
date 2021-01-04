@@ -4,12 +4,105 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RockPaperScissorsGUI"
+        FontFamily="VCR OSD Mono"
         mc:Ignorable="d"
-        Title="Rock, Paper, Scissors" Height="450" Width="800">
+        Title="Rock, Paper, Scissors" Height="650" Width="900" MaxHeight="650" MaxWidth="900" MinHeight="650" MinWidth="900" Background="#884DBC">
+    <Window.Resources>
+        <FontFamily x:Key="VCROSDMono">resources/#VCR OSD Mono</FontFamily>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="3" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FF30D6" Opacity="0.25"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#45E9FF" Opacity="0.50"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FF30D6" Opacity="0.65"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#45E9FF" Opacity="0.85"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="GameButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true" CornerRadius="8">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Button Content="Submit" HorizontalAlignment="Left" Margin="191,152,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Content="Rock" HorizontalAlignment="Left" Margin="400,278,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-        <TextBox Name="NameBox" HorizontalAlignment="Left" Margin="151,97,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Image Name="TitleImage" HorizontalAlignment="Left" Height="429" Margin="-20,-141,0,0" VerticalAlignment="Top" Width="1548" Source="/RockPaperScissors5.png" Stretch="Uniform"/>
+        <!--Intro Page Elements Start-->
 
+        <TextBlock Name="IntroductionText" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,136,0,0" Text="HELLO, WELCOME TO ROCK PAPER SCISSORS, ALSO KNOWN AS RO-SHAM-BO" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
+        <TextBlock Name="IntroductionText2" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,178,0,0" Text="I'M GOING TO ASSUME YOU KNOW THE RULES BUT IF NOT, YOU'VE GOT 3 CHOICES: ROCK, PAPER OR SCISSORS" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
+        <TextBlock Name="IntroductionText3" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,220,0,0" Text="ROCK BATTERS SCISSORS BUT GETS WRAPPED UP IN PAPER" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
+        <TextBlock Name="IntroductionText4" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,262,0,0" Text="PAPER COVERS ROCK BUT GETS CUT TO BITS BY SCISSORS" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
+        <TextBlock Name="IntroductionText5" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,305,0,0" Text="SCISSORS SLICES UP PAPER BUT GETS CLOBBERED BY ROCK" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
+        <TextBlock Name="IntroductionText6" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,347,0,0" Text="YOU'LL HAVE 3 BUTTONS WHICH REPRESENT YOUR OPTIONS, WINNING AS MUCH AS POSSIBLE IS THE NAME OF THE GAME" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="14.25" Height="18" Visibility="Visible"/>
+        <TextBlock Name="IntroductionText7" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,389,0,0" Text="THAT'S A LIE ROCK PAPER SCISSORS IS ACTUALLY THE NAME OF THE GAME" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
+        <TextBlock Name="IntroductionText8" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,431,0,0" Text="ANYWAY IF YOU WANT TO PUT YOUR NAME IN THE BOX BELOW SO I KNOW WHO I'LL BE PLAYING" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
+        <TextBlock Name="IntroductionText9" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,473,0,0" Text="AND THEN HIT THE SUBMIT BUTTON WE'LL GET ON WITH THE EXCITING GAMEPLAY" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
+        <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,504,0,0" Text="NAME HERE" TextWrapping="Wrap" VerticalAlignment="Top" Width="468" Height="42" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#673B91" Foreground="#45E9FF" CharacterCasing="Upper" FontSize="18" Visibility="Visible"/>
+        <Button Name="NameSubmitButton" Content="SUBMIT" HorizontalAlignment="Center" Margin="0,553,0,0" VerticalAlignment="Top" Height="39" Width="220" Background="#C124A7" Foreground="#45E9FF" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="NameSubmitButton_Click" Visibility="Visible"/>
+
+        <!--Intro Page Elements End-->
+
+        <!--Game Page Elements Start-->
+
+        <Button Style="{DynamicResource GameButtonStyle}" Name="RockButton" Width="255" Height="300" Margin="0,265,600,0" Visibility="Hidden">
+            <StackPanel>
+                <Image Source="/Rock.png" Stretch="Fill"></Image>
+            </StackPanel>
+        </Button>
+
+        <Button Style="{DynamicResource GameButtonStyle}" Name="PaperButton" Width="255" Height="300" Margin="0,265,0,0" Visibility="Hidden">
+            <StackPanel>
+                <Image Source="/Paperpng.png" Stretch="Fill"></Image>
+            </StackPanel>
+        </Button>
+
+        <Button Style="{DynamicResource GameButtonStyle}" Name="ScissorsButton" Width="255" Height="300" Margin="600,265,0,0" Visibility="Hidden">
+            <StackPanel>
+                <Image Source="/Scissorspng.png" Stretch="Fill"></Image>
+            </StackPanel>
+        </Button>
+
+        <!--Game Page Elements End-->
     </Grid>
 </Window>

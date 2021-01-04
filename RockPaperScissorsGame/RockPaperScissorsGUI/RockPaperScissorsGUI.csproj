@@ -7,7 +7,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Paperpng.png" />
+    <None Remove="resources\VCR_OSD_MONO_1.001.ttf" />
+    <None Remove="Rock.png" />
+    <None Remove="RockPaper ScissorsTitle.png" />
+    <None Remove="RockPaperScissors5.png" />
+    <None Remove="RockPaperScissorsTitle2.png" />
+    <None Remove="RockPaperScissorsTitle3.png" />
+    <None Remove="RockPaperScissorsTitle4.png" />
+    <None Remove="Scissorspng.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RockPaperScissorsGame\RockPaperScissorsGame.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Paperpng.png" />
+    <Resource Include="resources\VCR_OSD_MONO_1.001.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Rock.png" />
+    <Resource Include="RockPaper ScissorsTitle.png" />
+    <Resource Include="RockPaperScissors5.png" />
+    <Resource Include="RockPaperScissorsTitle2.png" />
+    <Resource Include="RockPaperScissorsTitle3.png" />
+    <Resource Include="RockPaperScissorsTitle4.png" />
+    <Resource Include="Scissorspng.png" />
   </ItemGroup>
 
 </Project>
