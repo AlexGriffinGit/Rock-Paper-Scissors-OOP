@@ -25,7 +25,7 @@ namespace RockPaperScissorsGame
 
         public override string ToString()
         {
-            return $"{ _player.Name } has chosen Rock which beats Scissors but loses to Paper";
+            return _name;
         }
 
         public override string Result()

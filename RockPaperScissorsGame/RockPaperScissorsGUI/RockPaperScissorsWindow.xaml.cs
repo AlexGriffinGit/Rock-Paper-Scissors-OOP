@@ -21,7 +21,9 @@ namespace RockPaperScissorsGUI
     /// </summary>
     public partial class RockPaperScissorsWindow : Window
     {
-        GameLoop gl = new GameLoop();
+        GameLoop _gl = new GameLoop();
+
+        bool _firstGame = true;
 
         public RockPaperScissorsWindow()
         {
@@ -30,24 +32,28 @@ namespace RockPaperScissorsGUI
 
         private void NameSubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            gl.StartUp(NameBox.Text);
+            _gl.StartUp(NameBox.Text);
             HideIntroInfo();
             ShowGameElements();
+            PopulateFields();
         }
 
         private void RockButton_Click(object sender, RoutedEventArgs e)
         {
-            gl.PlayerRock();
+            _gl.PlayerRock();
+            PopulateFields();
         }
 
         private void PaperButton_Click(object sender, RoutedEventArgs e)
         {
-            gl.PlayerPaper();
+            _gl.PlayerPaper();
+            PopulateFields();
         }
 
         private void ScissorsButton_Click(object sender, RoutedEventArgs e)
         {
-            gl.PlayerScissors();
+            _gl.PlayerScissors();
+            PopulateFields();
         }
 
         private void HideIntroInfo()
@@ -71,11 +77,49 @@ namespace RockPaperScissorsGUI
             PaperButton.Visibility = Visibility.Visible;
             ScissorsButton.Visibility = Visibility.Visible;
 
+            SubtitleBar.Visibility = Visibility.Visible;
+
             PlayerStatsLabels.Visibility = Visibility.Visible;
             PlayerStatsBox.Visibility = Visibility.Visible;
             ComputerStatsLabels.Visibility = Visibility.Visible;
             ComputerStatsBox.Visibility = Visibility.Visible;
             SharedStatsBox.Visibility = Visibility.Visible;
+
+            ResultText.Visibility = Visibility.Visible;
+        }
+
+        private async Task PopulateFields()
+        {
+            await Task.Delay(100);
+
+            Player human = _gl.ReturnHumanPlayer();
+            Player computer = _gl.ReturnComputer();
+
+            PlayerName.Content = human.Name;
+
+            WonHuman.Content = human.Won;
+            LostHuman.Content = human.Lost;
+            StreakHuman.Content = human.Streak;
+            HighestStreakHuman.Content = human.HighestStreak;
+            ScoreHuman.Content = human.Score;
+
+            WonComputer.Content = computer.Won;
+            LostComputer.Content = computer.Lost;
+            StreakComputer.Content = computer.Streak;
+            HighestStreakComputer.Content = computer.HighestStreak;
+            ScoreComputer.Content = computer.Score;
+
+            GamesPlayed.Content = human.RoundsPlayed;
+            GamesDrawn.Content = _gl.ReturnNumOfDraws();
+
+            if (!_firstGame)
+            {
+                ResultText.Text = _gl.ReturnStringResult();
+            }
+            else
+            {
+                _firstGame = false;
+            }
         }
     }
 }

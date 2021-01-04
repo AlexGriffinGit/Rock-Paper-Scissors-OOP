@@ -4,91 +4,99 @@ namespace RockPaperScissorsGame
 {
     public class GameLoop
     {
-        Player humanPlayer;
-        Player computer;
-        int gamesDrawn = 0;
+        Player _humanPlayer;
+        Player _computer;
 
-        Random rand = new Random();
+        int _gamesDrawn = 0;
+
+        string _resultString = "";
+
+        Random _rand = new Random();
 
         public void StartUp(string name)
         {
             if (name == "" || name == "NAME HERE")
             {
-                humanPlayer = new Player("NoName McGee");
+                _humanPlayer = new Player("NoName McGee");
             }
             else
             {
-                humanPlayer = new Player(name);
+                _humanPlayer = new Player(name);
             }
 
-            computer = new Player("Computer");
+            _computer = new Player("Computer");
         }
 
         public void Play()
         {
-            string result = ComputerChoice(computer);
+            string _result = ComputerChoice(_computer);
 
-            if (result == "Win")
+            if (_result == "Win")
             {
-                computer.IncrementWon();
-                computer.IncrementStreak();
-                computer.IncrementScore();
-                humanPlayer.IncrementLost();
-                humanPlayer.ResetStreak();
+                _computer.IncrementWon();
+                _computer.IncrementStreak();
+                _computer.IncrementScore();
+                _humanPlayer.IncrementLost();
+                _humanPlayer.ResetStreak();
+
+                _resultString = $"HAHA I WON A GAME, I MEAN I BEAT YOU REAL EASY, YOUR { _humanPlayer.Choice.ToString().ToUpper() } WAS NO MATCH FOR MY { _computer.Choice.ToString().ToUpper() }";
             }
-            else if (result == "Loss")
+            else if (_result == "Loss")
             {
-                humanPlayer.IncrementWon();
-                humanPlayer.IncrementStreak();
-                humanPlayer.IncrementScore();
-                computer.IncrementLost();
-                computer.ResetStreak();
+                _humanPlayer.IncrementWon();
+                _humanPlayer.IncrementStreak();
+                _humanPlayer.IncrementScore();
+                _computer.IncrementLost();
+                _computer.ResetStreak();
+
+                _resultString = $"YOU GOT ME REAL GOOD THERE CHAMP, YOUR { _humanPlayer.Choice.ToString().ToUpper() } WAS TOO POWERFUL FOR MY PUNY { _computer.Choice.ToString().ToUpper() }";
             }
             else
             {
-                gamesDrawn++;
+                _gamesDrawn++;
+                _resultString = $"IT SEEMS GREAT MINDS THINK ALIKE, WE'VE BOTH CHOSEN THE SAME, TAKE YOUR { _humanPlayer.Choice.ToString().ToUpper() } AND DUEL ME AGAIN MON FRÈRE";
             }
 
-            computer.IncrementRoundsPlayed();
-            humanPlayer.IncrementRoundsPlayed();
+            _computer.IncrementRoundsPlayed();
+            _humanPlayer.IncrementRoundsPlayed();
         }
 
         public void PlayerRock()
         {
-            humanPlayer.Choice = new Rock(humanPlayer);
+            _humanPlayer.Choice = new Rock(_humanPlayer);
 
             Play();
         }
 
         public void PlayerPaper()
         {
-            humanPlayer.Choice = new Paper(humanPlayer);
+            _humanPlayer.Choice = new Paper(_humanPlayer);
 
             Play();
         }
 
         public void PlayerScissors()
         {
-            humanPlayer.Choice = new Scissors(humanPlayer);
+            _humanPlayer.Choice = new Scissors(_humanPlayer);
 
             Play();
         }
 
         public string ComputerChoice(Player computer)
         {
-            int randomNumber = rand.Next(1, 100);
+            int _randomNumber = _rand.Next(1, 100);
 
-            if (randomNumber >= 1 && randomNumber <= 33)
+            if (_randomNumber >= 1 && _randomNumber <= 33)
             {
-                computer.Choice = new Rock(computer, humanPlayer);
+                computer.Choice = new Rock(computer, _humanPlayer);
             }
-            else if (randomNumber >= 34 && randomNumber <= 66)
+            else if (_randomNumber >= 34 && _randomNumber <= 66)
             {
-                computer.Choice = new Paper(computer, humanPlayer);
+                computer.Choice = new Paper(computer, _humanPlayer);
             }
             else
             {
-                computer.Choice = new Scissors(computer, humanPlayer);
+                computer.Choice = new Scissors(computer, _humanPlayer);
             }
 
             return computer.Choice.Result();
@@ -96,12 +104,22 @@ namespace RockPaperScissorsGame
 
         public Player ReturnHumanPlayer()
         {
-            return humanPlayer;
+            return _humanPlayer;
         }
 
         public Player ReturnComputer()
         {
-            return computer;
+            return _computer;
+        }
+
+        public int ReturnNumOfDraws()
+        {
+            return _gamesDrawn;
+        }
+
+        public string ReturnStringResult()
+        {
+            return _resultString;
         }
     }
 }
