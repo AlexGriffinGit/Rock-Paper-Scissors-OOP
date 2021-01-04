@@ -8,10 +8,10 @@ namespace RockPaperScissorsGame
     {
         private string _name;
         private Player _player;
-        private Scissors _beats;
-        private Paper _loses;
+        private Paper _beats;
+        private Rock _loses;
 
-        public Scissors(Player player, Scissors beats, Paper loses) : base(player, beats, loses)
+        public Scissors(Player player, Paper beats, Rock loses) : base(player, beats, loses)
         {
             _name = "Scissors";
             _player = player;
