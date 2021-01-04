@@ -103,6 +103,46 @@
             </StackPanel>
         </Button>
 
+        <Label Name="Subtitle" Content="" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" Foreground="#45E9FF" FontSize="26" Width="891" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden"/>
+
+        <StackPanel Name="PlayerStatsLabels" Orientation="Vertical" Width="200" Height="150" Margin="0,0,650,140" Visibility="Hidden">
+            <Label Content="GAMES WON" Foreground="#45E9FF" FontSize="20"/>
+            <Label Content="GAMES LOST" Foreground="#45E9FF" FontSize="20"/>
+            <Label Content="CURRENT STREAK" Foreground="#45E9FF" FontSize="20"/>
+            <Label Content="HIGHEST STREAK" Foreground="#45E9FF" FontSize="20"/>
+            <Label Content="SCORE" Foreground="#45E9FF" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Name="PlayerStatsBox" Orientation="Vertical" Width="200" Height="150" Margin="0,0,275,140" Visibility="Hidden">
+            <Label Name="WonHuman" Content="" Foreground="#45E9FF" FontSize="20"/>
+            <Label Name="LostHuman" Content="" Foreground="#45E9FF" FontSize="20"/>
+            <Label Name="StreakHuman" Content="" Foreground="#45E9FF" FontSize="20"/>
+            <Label Name="HighestStreakHuman" Content="" Foreground="#45E9FF" FontSize="20"/>
+            <Label Name="ScoreHuman" Content="" Foreground="#45E9FF" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Name="ComputerStatsLabels" Orientation="Vertical" Width="400" Height="150" Margin="450,0,0,140" Visibility="Hidden">
+            <Label Content="GAMES WON" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Content="GAMES LOST" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Content="CURRENT STREAK" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Content="HIGHEST STREAK" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Content="SCORE" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Name="ComputerStatsBox" Orientation="Vertical" Width="200" Height="150" Margin="275,0,0,140" Visibility="Hidden">
+            <Label Name="WonComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Name="LostComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Name="StreakComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Name="HighestStreakComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Name="ScoreComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Name="SharedStatsBox" Orientation="Vertical" Width="200" Height="150" Margin="0,0,0,140" Visibility="Hidden">
+            <TextBlock Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center"><Bold>GAMES PLAYED</Bold></TextBlock>
+            <Label Name="GamesPlayed" Content="" Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center"/>
+            <TextBlock Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center"><Bold>GAMES DRAWN</Bold></TextBlock>
+            <Label Name="GamesDrawn" Content="0" Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center"/>
+        </StackPanel>
         <!--Game Page Elements End-->
     </Grid>
 </Window>

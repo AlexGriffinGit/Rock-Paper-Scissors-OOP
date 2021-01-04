@@ -28,16 +28,26 @@ namespace RockPaperScissorsGUI
             InitializeComponent();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            gl.PlayerRock();
-        }
-
         private void NameSubmitButton_Click(object sender, RoutedEventArgs e)
         {
             gl.StartUp(NameBox.Text);
             HideIntroInfo();
-            ShowGameButtons();
+            ShowGameElements();
+        }
+
+        private void RockButton_Click(object sender, RoutedEventArgs e)
+        {
+            gl.PlayerRock();
+        }
+
+        private void PaperButton_Click(object sender, RoutedEventArgs e)
+        {
+            gl.PlayerPaper();
+        }
+
+        private void ScissorsButton_Click(object sender, RoutedEventArgs e)
+        {
+            gl.PlayerScissors();
         }
 
         private void HideIntroInfo()
@@ -55,11 +65,17 @@ namespace RockPaperScissorsGUI
             NameSubmitButton.Visibility = Visibility.Hidden;
         }
 
-        private void ShowGameButtons()
+        private void ShowGameElements()
         {
             RockButton.Visibility = Visibility.Visible;
             PaperButton.Visibility = Visibility.Visible;
             ScissorsButton.Visibility = Visibility.Visible;
+
+            PlayerStatsLabels.Visibility = Visibility.Visible;
+            PlayerStatsBox.Visibility = Visibility.Visible;
+            ComputerStatsLabels.Visibility = Visibility.Visible;
+            ComputerStatsBox.Visibility = Visibility.Visible;
+            SharedStatsBox.Visibility = Visibility.Visible;
         }
     }
 }

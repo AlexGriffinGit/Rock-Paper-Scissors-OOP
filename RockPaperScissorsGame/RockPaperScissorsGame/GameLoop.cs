@@ -6,12 +6,13 @@ namespace RockPaperScissorsGame
     {
         Player humanPlayer;
         Player computer;
+        int gamesDrawn = 0;
 
         Random rand = new Random();
 
         public void StartUp(string name)
         {
-            if (name == "")
+            if (name == "" || name == "NAME HERE")
             {
                 humanPlayer = new Player("NoName McGee");
             }
@@ -42,6 +43,10 @@ namespace RockPaperScissorsGame
                 humanPlayer.IncrementScore();
                 computer.IncrementLost();
                 computer.ResetStreak();
+            }
+            else
+            {
+                gamesDrawn++;
             }
 
             computer.IncrementRoundsPlayed();
@@ -87,6 +92,16 @@ namespace RockPaperScissorsGame
             }
 
             return computer.Choice.Result();
+        }
+
+        public Player ReturnHumanPlayer()
+        {
+            return humanPlayer;
+        }
+
+        public Player ReturnComputer()
+        {
+            return computer;
         }
     }
 }
