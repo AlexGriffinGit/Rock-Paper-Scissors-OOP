@@ -43,6 +43,9 @@ namespace RockPaperScissorsGame
                 computer.IncrementLost();
                 computer.ResetStreak();
             }
+
+            computer.IncrementRoundsPlayed();
+            humanPlayer.IncrementRoundsPlayed();
         }
 
         public void PlayerRock()
