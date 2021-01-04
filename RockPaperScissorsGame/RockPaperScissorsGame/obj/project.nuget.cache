@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "GmbVuL0pn9y7n+UfyfSfZW0AuofaajkgfghBlfy7hJ5k/F6Cx3wmr7vyGXBITL9UPsholr8h6VFRTAlnaItsWQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alex\\Documents\\GitHub\\RPSGame\\RockPaperScissorsGame\\RockPaperScissorsGame\\RockPaperScissorsGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
