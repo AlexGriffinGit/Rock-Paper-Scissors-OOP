@@ -8,20 +8,42 @@ namespace RockPaperScissorsGame
     {
         private string _name;
         private Player _player;
-        private Paper _beats;
-        private Rock _loses;
+        private Player _opponent;
 
-        public Scissors(Player player, Paper beats, Rock loses) : base(player, beats, loses)
+        public Scissors(Player player, Player opponent) : base(player, opponent)
         {
             _name = "Scissors";
             _player = player;
-            _beats = beats;
-            _loses = loses;
+            _opponent = opponent;
+        }
+
+        public Scissors(Player player) : base(player)
+        {
+            _name = "Scissors";
+            _player = player;
         }
 
         public override string ToString()
         {
-            return $"{ _player } has chosen { _name } which beats { _beats } but loses to { _loses }";
+            return $"{ _player.Name } has chosen Scissors which beats Paper but loses to Rock";
+        }
+
+        public override string Result()
+        {
+            Type opponentChoice = _opponent.Choice.GetType();
+
+            if (opponentChoice == this.GetType())
+            {
+                return "Draw";
+            }
+            else if (opponentChoice.Equals(typeof(Paper)))
+            {
+                return "Win";
+            }
+            else
+            {
+                return "Loss";
+            }
         }
     }
 }
