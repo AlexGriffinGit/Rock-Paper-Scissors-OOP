@@ -8,53 +8,23 @@ namespace RockPaperScissorsGame
     {
         private string _name;
         private Choice _choice;
-        private int _won;
-        private int _lost;
-        private int _streak;
-        private int _highestStreak;
-        private int _score;
+        private int _won, _lost, _streak, _highestStreak, _score, _roundsPlayed;
 
-        public Choice Choice 
-        {
-            get { return _choice; }
-            set { _choice = Choice; }
-        }
+        public Choice Choice { get { return _choice; } set { _choice = value; } }
 
-        public string Name
-        {
-            get { return _name; }
-            private set { }
-        }
+        public string Name { get { return _name; } private set { } }
 
-        public int Won 
-        { 
-            get { return _won; }
-            private set { }
-        }
+        public int Won { get { return _won; } private set { } }
 
-        public int Lost
-        {
-            get { return _lost; }
-            private set { }
-        }
+        public int Lost { get { return _lost; } private set { } }
 
-        public int Streak
-        {
-            get { return _streak; }
-            private set { }
-        }
+        public int Streak { get { return _streak; } private set { } }
 
-        public int HighestStreak
-        {
-            get { return _highestStreak; }
-            private set { }
-        }
+        public int HighestStreak { get { return _highestStreak; } private set { } }
 
-        public int Score
-        {
-            get { return _score; }
-            private set { }
-        }
+        public int Score { get { return _score; } private set { } }
+
+        public int RoundsPlayed { get { return _roundsPlayed; } private set { } }
 
         public Player(string name)
         {
@@ -65,29 +35,14 @@ namespace RockPaperScissorsGame
             _score = 0;
         }
 
-        public void IncrementWon()
-        {
-            _won = _won + 1;
-        }
-
-        public void IncrementLost()
-        {
-            _lost = _lost + 1;
-        }
-
         public void IncrementStreak()
         {
-            _streak = _streak + 1;
+            _streak += 1;
 
             if (_streak > _highestStreak)
             {
                 _highestStreak = _streak;
             }
-        }
-
-        public void ResetStreak()
-        {
-            _streak = 0;
         }
 
         public void IncrementScore()
@@ -99,7 +54,15 @@ namespace RockPaperScissorsGame
                 streak = 1;
             }
 
-            _score = _score + (1 * streak);
+            _score += (1 * streak);
         }
+
+        public void IncrementWon() => _won += 1;
+
+        public void IncrementLost() => _lost += 1;
+
+        public void ResetStreak() => _streak = 0;
+
+        public void IncrementRoundsPlayed() => _roundsPlayed += 1;
     }
 }
