@@ -16,7 +16,17 @@ namespace RockPaperScissorsGame
 
         string _resultString = "";
 
-        Random _rand = new Random();
+        private readonly IRandomNumber _generator;
+
+        public GameLoop(IRandomNumber generator)
+        {
+            _generator = generator;
+        }
+
+        public GameLoop() : this(new RandomNumber())
+        {
+
+        }
 
         public void StartUp(string name)
         {
@@ -89,7 +99,7 @@ namespace RockPaperScissorsGame
 
         public string ComputerChoice(Player computer)
         {
-            int _randomNumber = _rand.Next(1, 100);
+            int _randomNumber = _generator.GenerateRandomInt(1, 100);
 
             if (_randomNumber >= 1 && _randomNumber <= 33)
             {
