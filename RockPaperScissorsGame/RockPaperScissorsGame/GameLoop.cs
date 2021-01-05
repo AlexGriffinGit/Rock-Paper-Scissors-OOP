@@ -9,6 +9,8 @@ namespace RockPaperScissorsGame
 
         public Player HumanPlayer { get { return _humanPlayer; } private set { } }
         public Player ComputerPlayer { get { return _computer; } private set { } }
+        public int GamesDrawn { get { return _gamesDrawn; } private set { } }
+        public string ResultString { get { return _resultString; } private set { } }
 
         int _gamesDrawn = 0;
 
@@ -103,16 +105,6 @@ namespace RockPaperScissorsGame
             }
 
             return computer.Choice.Result();
-        }
-
-        public int ReturnNumOfDraws()
-        {
-            return _gamesDrawn;
-        }
-
-        public string ReturnStringResult()
-        {
-            return _resultString;
         }
     }
 }

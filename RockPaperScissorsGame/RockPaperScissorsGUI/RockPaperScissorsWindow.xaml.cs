@@ -110,11 +110,11 @@ namespace RockPaperScissorsGUI
             ScoreComputer.Content = computer.Score;
 
             GamesPlayed.Content = human.RoundsPlayed;
-            GamesDrawn.Content = _gl.ReturnNumOfDraws();
+            GamesDrawn.Content = _gl.GamesDrawn;
 
             if (!_firstGame)
             {
-                ResultText.Text = _gl.ReturnStringResult();
+                ResultText.Text = _gl.ResultString;
             }
             else
             {
