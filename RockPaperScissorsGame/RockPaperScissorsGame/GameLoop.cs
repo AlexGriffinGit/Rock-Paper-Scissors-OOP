@@ -7,8 +7,8 @@ namespace RockPaperScissorsGame
         Player _humanPlayer;
         Player _computer;
 
-        public Player HumanPlayer { get { return _humanPlayer; } private set { } }
-        public Player ComputerPlayer { get { return _computer; } private set { } }
+        public Player HumanPlayer { get { return _humanPlayer; }  set { _humanPlayer = value; } }
+        public Player ComputerPlayer { get { return _computer; }  set { _computer = value; } }
         public int GamesDrawn { get { return _gamesDrawn; } private set { } }
         public string ResultString { get { return _resultString; } private set { } }
 
