@@ -69,7 +69,7 @@
         <Image Name="TitleImage" HorizontalAlignment="Left" Height="429" Margin="-20,-141,0,0" VerticalAlignment="Top" Width="1548" Source="/RockPaperScissors5.png" Stretch="Uniform"/>
         <!--Intro Page Elements Start-->
 
-        <TextBlock Name="IntroductionText" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,136,0,0" Text="HELLO, WELCOME TO ROCK PAPER SCISSORS, ALSO KNOWN AS RO-SHAM-BO" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
+        <TextBlock Name="IntroductionText" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,136,0,0" Text="HELLO, WELCOME TO ROCK PAPER SCISSORS, ALSO KNOWN AS RO-SHAM-BO" TextWrapping="Wrap" FontFamily="./resources/#VCR OSD Mono" FontSize="15" Height="18" Visibility="Visible"/>
         <TextBlock Name="IntroductionText2" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,178,0,0" Text="I'M GOING TO ASSUME YOU KNOW THE RULES BUT IF NOT, YOU'VE GOT 3 CHOICES: ROCK, PAPER OR SCISSORS" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
         <TextBlock Name="IntroductionText3" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,220,0,0" Text="ROCK BATTERS SCISSORS BUT GETS WRAPPED UP IN PAPER" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
         <TextBlock Name="IntroductionText4" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,262,0,0" Text="PAPER COVERS ROCK BUT GETS CUT TO BITS BY SCISSORS" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
@@ -78,8 +78,8 @@
         <TextBlock Name="IntroductionText7" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,389,0,0" Text="THAT'S A LIE ROCK PAPER SCISSORS IS ACTUALLY THE NAME OF THE GAME" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
         <TextBlock Name="IntroductionText8" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,431,0,0" Text="ANYWAY IF YOU WANT TO PUT YOUR NAME IN THE BOX BELOW SO I KNOW WHO I'LL BE PLAYING" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
         <TextBlock Name="IntroductionText9" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#45E9FF" Margin="0,473,0,0" Text="AND THEN HIT THE SUBMIT BUTTON WE'LL GET ON WITH THE EXCITING GAMEPLAY" TextWrapping="Wrap" FontFamily="{StaticResource VCROSDMono}" FontSize="15" Height="18" Visibility="Visible"/>
-        <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,519,0,0" Text="NAME HERE" TextWrapping="Wrap" VerticalAlignment="Top" Width="468" Height="42" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#673B91" Foreground="#45E9FF" CharacterCasing="Upper" FontSize="18" Visibility="Visible"/>
-        <Button Name="NameSubmitButton" Content="SUBMIT" HorizontalAlignment="Center" Margin="0,577,0,0" VerticalAlignment="Top" Height="39" Width="220" Background="#C124A7" Foreground="#45E9FF" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="NameSubmitButton_Click" Visibility="Visible"/>
+        <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,519,0,0" Text="NAME HERE" TextWrapping="Wrap" VerticalAlignment="Top" Width="468" Height="42" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#673B91" Foreground="#45E9FF" CharacterCasing="Upper" FontSize="18" Visibility="Visible" FontFamily="{StaticResource VCROSDMono}"/>
+        <Button Name="NameSubmitButton" Content="SUBMIT" HorizontalAlignment="Center" Margin="0,577,0,0" VerticalAlignment="Top" Height="39" Width="220" Background="#C124A7" Foreground="#45E9FF" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="NameSubmitButton_Click" Visibility="Visible" FontFamily="{StaticResource VCROSDMono}"/>
 
         <!--Intro Page Elements End-->
 
@@ -104,51 +104,51 @@
         </Button>
 
         <StackPanel Name="SubtitleBar" Orientation="Horizontal" Width="880" Height="65" Margin="10,0,10,352" Visibility="Hidden">
-            <Label Name="PlayerName" Content="" Foreground="#45E9FF" FontSize="33" Width="390" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="65"/>
-            <Label Content="VS" VerticalAlignment="Top" Foreground="#45E9FF" FontSize="50" Width="100" HorizontalContentAlignment="Center" Margin="0,0,0,0" Height="65"/>
-            <Label Content="THE COMPUTER" VerticalAlignment="Top" Foreground="#45E9FF" FontSize="33" Width="390" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="65"/>
+            <Label Name="PlayerName" Content="" Foreground="#45E9FF" FontSize="33" Width="390" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="65" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Content="VS" VerticalAlignment="Top" Foreground="#45E9FF" FontSize="50" Width="100" HorizontalContentAlignment="Center" Margin="0,0,0,0" Height="65" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Content="THE COMPUTER" VerticalAlignment="Top" Foreground="#45E9FF" FontSize="33" Width="390" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="65" FontFamily="{StaticResource VCROSDMono}"/>
         </StackPanel>
 
         <StackPanel Name="PlayerStatsLabels" Orientation="Vertical" Width="200" Height="150" Margin="0,0,660,140" Visibility="Hidden">
-            <Label Content="GAMES WON" Foreground="#45E9FF" FontSize="20"/>
-            <Label Content="GAMES LOST" Foreground="#45E9FF" FontSize="20"/>
-            <Label Content="CURRENT STREAK" Foreground="#45E9FF" FontSize="20"/>
-            <Label Content="HIGHEST STREAK" Foreground="#45E9FF" FontSize="20"/>
-            <Label Content="SCORE" Foreground="#45E9FF" FontSize="20"/>
+            <Label Content="GAMES WON" Foreground="#45E9FF" FontSize="20" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Content="GAMES LOST" Foreground="#45E9FF" FontSize="20" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Content="CURRENT STREAK" Foreground="#45E9FF" FontSize="20" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Content="HIGHEST STREAK" Foreground="#45E9FF" FontSize="20" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Content="SCORE" Foreground="#45E9FF" FontSize="20" FontFamily="{StaticResource VCROSDMono}"/>
         </StackPanel>
 
         <StackPanel Name="PlayerStatsBox" Orientation="Vertical" Width="200" Height="150" Margin="0,0,280,140" Visibility="Hidden">
-            <Label Name="WonHuman" Content="" Foreground="#45E9FF" FontSize="20"/>
-            <Label Name="LostHuman" Content="" Foreground="#45E9FF" FontSize="20"/>
-            <Label Name="StreakHuman" Content="" Foreground="#45E9FF" FontSize="20"/>
-            <Label Name="HighestStreakHuman" Content="" Foreground="#45E9FF" FontSize="20"/>
-            <Label Name="ScoreHuman" Content="" Foreground="#45E9FF" FontSize="20"/>
+            <Label Name="WonHuman" Content="" Foreground="#45E9FF" FontSize="20" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Name="LostHuman" Content="" Foreground="#45E9FF" FontSize="20" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Name="StreakHuman" Content="" Foreground="#45E9FF" FontSize="20" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Name="HighestStreakHuman" Content="" Foreground="#45E9FF" FontSize="20" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Name="ScoreHuman" Content="" Foreground="#45E9FF" FontSize="20" FontFamily="{StaticResource VCROSDMono}"/>
         </StackPanel>
 
         <StackPanel Name="ComputerStatsLabels" Orientation="Vertical" Width="400" Height="150" Margin="460,0,0,140" Visibility="Hidden">
-            <Label Content="GAMES WON" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
-            <Label Content="GAMES LOST" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
-            <Label Content="CURRENT STREAK" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
-            <Label Content="HIGHEST STREAK" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
-            <Label Content="SCORE" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Content="GAMES WON" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Content="GAMES LOST" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Content="CURRENT STREAK" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Content="HIGHEST STREAK" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Content="SCORE" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right" FontFamily="{StaticResource VCROSDMono}"/>
         </StackPanel>
 
         <StackPanel Name="ComputerStatsBox" Orientation="Vertical" Width="200" Height="150" Margin="280,0,0,140" Visibility="Hidden">
-            <Label Name="WonComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
-            <Label Name="LostComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
-            <Label Name="StreakComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
-            <Label Name="HighestStreakComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
-            <Label Name="ScoreComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right"/>
+            <Label Name="WonComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Name="LostComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Name="StreakComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Name="HighestStreakComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right" FontFamily="{StaticResource VCROSDMono}"/>
+            <Label Name="ScoreComputer" Content="" Foreground="#45E9FF" FontSize="20" HorizontalAlignment="Right" FontFamily="{StaticResource VCROSDMono}"/>
         </StackPanel>
 
         <StackPanel Name="SharedStatsBox" Orientation="Vertical" Width="200" Height="150" Margin="0,0,0,140" Visibility="Hidden">
-            <TextBlock Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center"><Bold>GAMES PLAYED</Bold></TextBlock>
-            <Label Name="GamesPlayed" Content="" Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center"/>
-            <TextBlock Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center"><Bold>GAMES DRAWN</Bold></TextBlock>
-            <Label Name="GamesDrawn" Content="" Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center"/>
+            <TextBlock Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center" FontFamily="{StaticResource VCROSDMono}"><Bold>GAMES PLAYED</Bold></TextBlock>
+            <Label Name="GamesPlayed" Content="" Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center" FontFamily="{StaticResource VCROSDMono}"/>
+            <TextBlock Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center" FontFamily="{StaticResource VCROSDMono}"><Bold>GAMES DRAWN</Bold></TextBlock>
+            <Label Name="GamesDrawn" Content="" Foreground="#45E9FF" FontSize="22" HorizontalAlignment="Center" FontFamily="{StaticResource VCROSDMono}"/>
         </StackPanel>
 
-        <TextBlock Name="ResultText" Foreground="#45E9FF" FontSize="16.5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10" Text="" TextWrapping="Wrap" Width="375" Height="70" TextAlignment="Center" Visibility="Hidden"/>
+        <TextBlock Name="ResultText" Foreground="#45E9FF" FontSize="16.5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10" Text="" TextWrapping="Wrap" Width="375" Height="70" TextAlignment="Center" Visibility="Hidden" FontFamily="{StaticResource VCROSDMono}"/>
         <!--Game Page Elements End-->
     </Grid>
 </Window>

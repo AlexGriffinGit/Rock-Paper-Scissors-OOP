@@ -4,6 +4,17 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <RootNamespace>RockPaperScissorsGUI</RootNamespace>
+    <PackageId>Rock Paper Scissors</PackageId>
+    <Authors>Alex Griffin</Authors>
+    <Product>A simple Rock Paper Scissors game.</Product>
+    <Copyright>2021 Alex Griffin</Copyright>
+    <AssemblyName>Rock Paper Scissors</AssemblyName>
+    <Description>A simple Rock Paper Scissors game that is played against an "AI", keeps going on until you stop and tracks your score against the computer, have fun.</Description>
+    <PackageIcon>RockPaperScissorsIcon.png</PackageIcon>
+    <ApplicationIcon>RockPaperScissorsIconTransparent.ico</ApplicationIcon>
+    <PackageProjectUrl>https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +23,10 @@
     <None Remove="Rock.png" />
     <None Remove="RockPaperScissors5.png" />
     <None Remove="Scissorspng.png" />
+    <None Include="..\..\..\..\..\Downloads\RockPaperScissorsIcon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

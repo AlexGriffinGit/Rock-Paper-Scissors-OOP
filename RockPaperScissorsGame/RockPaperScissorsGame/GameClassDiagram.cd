@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RockPaperScissorsGame.Choice">
+    <Position X="4.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEAAAACAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Choice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissorsGame.GameLoop">
+    <Position X="10.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAhAAgAQAAgBAAQAAAAAIAAAgQCAAAAAEAQ=</HashCode>
+      <FileName>GameLoop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissorsGame.Paper">
+    <Position X="4.5" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEAAAACAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Paper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissorsGame.Rock">
+    <Position X="1.5" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEAAAACAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Rock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissorsGame.Scissors">
+    <Position X="7.5" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEAAAACAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Scissors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object">
+    <Position X="9" Y="0.5" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="RockPaperScissorsGame.RandomNumber">
+    <Position X="13.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RandomNumber.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RockPaperScissorsGame.Player">
+    <Position X="16.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACAAICDFAAAAAggAAAAAIAQAAAEYCgABSAIEAAAAAEA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="RockPaperScissorsGame.IRandomNumber">
+    <Position X="13.5" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRandomNumber.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
