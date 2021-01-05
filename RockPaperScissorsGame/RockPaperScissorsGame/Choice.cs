@@ -9,8 +9,6 @@ namespace RockPaperScissorsGame
         private string _name;
         private Player _player;
         private Player _opponent;
-        private Choice _beats;
-        private Choice _loses;
 
         public Choice(Player player, Player opponent)
         {
@@ -27,7 +25,7 @@ namespace RockPaperScissorsGame
 
         public override string ToString()
         {
-            return $"{ _player.Name } has chosen { _name } which beats { _beats } but loses to { _loses }";
+            return $"{ _player.Name } has chosen { _name } which beats - but loses to -";
         }
 
         public abstract string Result();
