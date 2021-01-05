@@ -53,7 +53,7 @@ Another benefit of taking on this project was garnering more experience using Gi
 If you're interested in giving it a bit of a test drive, the executable can be downloaded [here](https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP/raw/main/Rock%20Paper%20Scissors.exe) or you can download the repository [here](https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP/archive/main.zip).
 
 ## Credits and Attributions ##
-Rock Paper Scissors Vectors/Icons come from Vecteezy [here](https://www.vecteezy.com/free-vector/rock-paper-scissors).
+Rock Paper Scissors Vectors/Icons come from Vecteezy [here](https://www.vecteezy.com/free-vector/rock-paper-scissors). Listed on vecteezy by nightwolfdezines [here](https://www.vecteezy.com/vector-art/691489-retro-offset-rock-paper-scissors-icons).
 
 The title font is Zing Rust Base and is provided free of charge from the Zing Rust font collection, the font is free for commercial use which can be seen [here](https://www.1001fonts.com/zing-font.html) and the license document is [here](https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP/blob/main/EULA%20Free%20Font%20License%20Ver.%202.0.pdf).
 
