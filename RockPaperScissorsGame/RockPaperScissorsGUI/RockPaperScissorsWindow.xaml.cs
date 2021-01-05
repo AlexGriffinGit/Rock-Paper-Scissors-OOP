@@ -92,8 +92,8 @@ namespace RockPaperScissorsGUI
         {
             await Task.Delay(100);
 
-            Player human = _gl.ReturnHumanPlayer();
-            Player computer = _gl.ReturnComputer();
+            Player human = _gl.HumanPlayer;
+            Player computer = _gl.ComputerPlayer;
 
             PlayerName.Content = human.Name;
 
