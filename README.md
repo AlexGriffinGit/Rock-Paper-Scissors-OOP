@@ -2,12 +2,12 @@
 ## OOP Practice ##
 
 ### Table Of Contents ###
-* [Summary](link)
-* [Goal](link)
-* [Screenshots](link)
-* [Class Diagram](link)
-* [Download](link)
-* [Credits and Attributions](link)
+* [Summary](https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP/blob/main/README.md#summary)
+* [Goal](https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP/blob/main/README.md#goal)
+* [Screenshots](https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP/blob/main/README.md#screenshots)
+* [Class Diagram](https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP/blob/main/README.md#class-diagram)
+* [Download](https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP/blob/main/README.md#download)
+* [Credits and Attributions](https://github.com/AlexGriffinGit/Rock-Paper-Scissors-OOP/blob/main/README.md#credits-and-attributions)
 
 ## Summary ##
 First off thanks for taking the time to look through my previous projects and let me welcome you to my simple rock, paper, scissors game. It was programmed in C# with .NET Core, the user interface is built with WPF and finally it is unit tested with NUnit. 
@@ -31,7 +31,7 @@ As you'll see from the screenshots I also took the opportunity to experiment wit
 
 
 ## Download ##
-If you're interested in giving it a bit of a tes drive, the executable can be downloaded [here](exe) or you can download the repository [here](repo)
+If you're interested in giving it a bit of a test drive, the executable can be downloaded [here](exe) or you can download the repository [here](repo)
 
 ## Credits and Attributions ##
 Rock Paper Scissors Vectors/Icons come from Vecteezy [here](https://www.vecteezy.com/free-vector/rock-paper-scissors)
